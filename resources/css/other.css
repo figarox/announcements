@@ -1,0 +1,30 @@
+#facebook {
+    color: blue;
+    font-size: 26px;
+    transition: filter 300ms ease-in-out;
+}
+#facebook:hover {
+    transition: filter 300ms ease-in-out;
+    filter: drop-shadow(0px 0px 10px rgb(74, 137, 255));
+}
+
+#mail {
+    color: rgb(255, 0, 0);
+    font-size: 26px;
+    transition: filter 300ms ease-in-out;
+}
+
+#mail:hover {
+    transition: filter 300ms ease-in-out;
+    filter: drop-shadow(0px 0px 10px rgb(255, 42, 27));
+}
+
+#notifications {
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    transition: color 300ms ease-in-out;
+}
+
+#circle-notifications:hover #notifications {
+    color: yellow;
+}

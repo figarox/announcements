@@ -21,7 +21,16 @@ const MainListing = ({ listings, flash, success, onAlertHidden, filters }) => {
     return (
         <>
             <MainLayout />
-            <Filters filters={filters} />
+            <div class="flex items-center justify-center">
+                <Filters filters={filters} />
+            </div>
+            <div class="flex items-center justify-center">
+                <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 {list}
             </div>

@@ -8,7 +8,7 @@ const Pagination = ({ links }) => (
                 key={index}
                 className={`py-2 px-4 rounded-md ${
                     link.active
-                        ? "bg-indigo-500 dark:bg-indigo-800 text-gray-300"
+                        ? "bg-bgnav dark:bg-indigo-800 text-gray-300"
                         : ""
                 }`}
                 href={link.url}

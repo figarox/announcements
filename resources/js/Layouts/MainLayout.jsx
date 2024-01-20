@@ -64,40 +64,46 @@ const MainLayout = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="grid grid-rows-3 grid-flow-col gap-4  items-center pl-2 max-w-min min-w-[200px] h-16 bg-bgnav rounded-3xl mr-5">
+                    <div class="grid grid-rows-3 grid-flow-col gap-4  items-center pl-2 max-w-min min-w-[250px] h-16 bg-bgnav rounded-3xl mr-5">
                         <div class="relative row-span-3 w-[50px] h-[50px] rounded-full bg-white"></div>
-                        <div class="relative row-span-1 top-3 text-white">
+                        <div class="relative row-span-1 top-4 ml-[-10px] text-white">
                             {auth.user != null ? auth.user.name : null}
                         </div>
-                        <div class="relative row-span-2   text-white">
+                        <div class="relative row-span-2 ml-[-20px]  text-white">
                             {auth.user != null ? auth.user.email : null}
                         </div>
                         <button
                             onClick={toggleDiv}
-                            class="relative top-[15px] right-[20px] w-[25px] h-[25px] rounded-full bg-[#E7E7E7] ring-1 ring-white"
+                            class="absolute top-[23px] right-[30px] w-[25px] h-[25px] rounded-full bg-[#E7E7E7] ring-1 ring-white"
                         >
-                            <ion-icon name="chevron-down-outline"></ion-icon>
+                            <ion-icon
+                                id="arrow"
+                                name="chevron-down-outline"
+                            ></ion-icon>
                         </button>
 
                         {isVisible && (
                             <div class="fixed block w-[246px] h-auto right-[22px] top-[80px] z-10 p-5 backdrop-blur-md bg-white/30 border-2 border-gray-300 rounded-3xl">
-                                <a href="/account">
-                                    <button class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-5 mt-3">
-                                        Moje Konto
-                                    </button>
-                                </a>
-                                <a href="/account">
-                                    <button class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-5">
-                                        Ustawienia
-                                    </button>
-                                </a>
                                 {auth.user != null ? (
-                                    <button
-                                        onClick={handleLogout}
-                                        class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-3"
-                                    >
-                                        Wyloguj
-                                    </button>
+                                    <>
+                                        <a href="/account">
+                                            <button class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-5 mt-3">
+                                                Moje Konto
+                                            </button>
+                                        </a>
+
+                                        <a href="/account">
+                                            <button class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-5">
+                                                Ustawienia
+                                            </button>
+                                        </a>
+                                        <button
+                                            onClick={handleLogout}
+                                            class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-3"
+                                        >
+                                            Wyloguj
+                                        </button>
+                                    </>
                                 ) : (
                                     <a href="/login">
                                         <button class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-3">
@@ -111,17 +117,20 @@ const MainLayout = () => {
                 </div>
             </header>
             <nav>
-                <div class="relative h-[75px] w-full rounded-br-[45px] rounded-bl-[45px] -z-10 bg-white py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
-                    <div className="relative flex justify-end top-[-5px] right-[20px]">
+                <div class="relative h-[75px] w-full rounded-br-[45px] rounded-bl-[45px]  bg-white py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
+                    <div className="relative flex justify-end top-[-5px] right-[20px] ">
                         {auth.user != null ? (
                             <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
                                 Moje Ołoszenia
                             </div>
                         ) : null}
 
-                        <div class=" w-[250px] h-14 mr-4 bg-bgnav text-white rounded-3xl flex justify-center items-center ">
-                            Ołoszenia
-                        </div>
+                        <a href="/listing">
+                            <button class=" w-[250px] h-14 mr-4  bg-bgnav text-white rounded-3xl flex justify-center items-center ">
+                                Ołoszenia
+                            </button>
+                        </a>
+
                         <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
                             O nas
                         </div>

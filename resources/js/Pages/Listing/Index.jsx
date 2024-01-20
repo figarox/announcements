@@ -4,14 +4,18 @@ import Box from "../../Components/UI/Box";
 import MainLayout from "../../Layouts/MainLayout";
 import Filters from "../../Components/Filters";
 import Pagination from "../../Components/UI/Pagination";
+import test from "../../../picture/picture.webp";
 
 const MainListing = ({ listings, flash, success, onAlertHidden, filters }) => {
     const list = listings.data.map((listings) => (
         <Box key={listings.id}>
-            <div class="">{listings.price}</div>
-            {listings.city} {listings.code}
-            <br />
-            {listings.street} {listings.street_nr}
+            <div class="relative grid grid-rows-2 grid-flow-col gap-0">
+                <img class="row-span-3 w-[200px] h-[233px]" src={test} />
+
+                <div class="col-span-3 bg-gray-300">02</div>
+                <div class="col-span-3 bg-gray-500 ">03</div>
+            </div>
+
             {/* <div>
                 <a href={`/listing/${listings.id}/edit`}>Edit</a>
             </div> */}
@@ -31,9 +35,10 @@ const MainListing = ({ listings, flash, success, onAlertHidden, filters }) => {
                 <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                {list}
+            <div class="relative flex justify-center ">
+                <div>{list}</div>
             </div>
+
             {listings.data.length > 0 && (
                 <div className="w-full flex justify-center mt-8 mb-8">
                     <Pagination links={listings.links} />

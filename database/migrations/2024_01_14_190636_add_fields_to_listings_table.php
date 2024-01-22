@@ -16,10 +16,16 @@ return new class extends Migration
             $table->tinyText('city');
             $table->tinyText('code');
             $table->tinyText('street');
-            $table->tinyText('street_nr');
-
+            $table->unsignedInteger('street_nr');
             $table->unsignedInteger('rooms');
             $table->unsignedInteger('floor');
+
+            $table->unsignedInteger('meters');
+            $table->tinyText('type');
+            $table->tinyText('market');
+            $table->tinyText('accessories');
+            $table->tinyText('advertiser');
+            $table->unsignedInteger('age');
 
             $table->unsignedInteger('price');
             $table->tinyText('SW');
@@ -32,8 +38,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropColumns('listings', [
-           'voivodeship', 'city', 'code', 'street', 'street_nr', 'price'
-        ]);
+        if (Schema::hasTable('listings')) {
+            Schema::table('listings', function (Blueprint $table) {
+                $table->dropColumn(['voivodeship', 'city', 'code', 'street', 'street_nr', 'rooms', 'floor', 'meters', 'type', 'market', 'accessories', 'advertiser', 'age', 'price', 'SW']);
+            });
+        }
     }
 };

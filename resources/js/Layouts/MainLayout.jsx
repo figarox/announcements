@@ -36,7 +36,7 @@ const MainLayout = () => {
 
     return (
         <>
-            <header class="relative flex w-full flex-wrap items-center justify-center bg-[#F6FBFF] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
+            <header class="relative flex w-full flex-wrap items-center justify-center bg-[#F6FBFF] py-2 text-neutral-500 shadow-lg shadow-[#ECF0FB] hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
                 <div class="w-1/3 h-auto flex p-4 ">
                     <div class="ml-6 flex items-center justify-center">
                         <ion-icon id="facebook" name="logo-facebook"></ion-icon>
@@ -66,7 +66,7 @@ const MainLayout = () => {
                     </div>
                     <div class="grid grid-rows-3 grid-flow-col gap-4  items-center pl-2 max-w-min min-w-[250px] h-16 bg-bgnav rounded-3xl mr-5">
                         <div class="relative row-span-3 w-[50px] h-[50px] rounded-full bg-white"></div>
-                        <div class="relative row-span-1 top-4 ml-[-10px] text-white">
+                        <div class="relative row-span-1 top-4 ml-[-20px] text-white">
                             {auth.user != null ? auth.user.name : null}
                         </div>
                         <div class="relative row-span-2 ml-[-20px]  text-white">
@@ -117,17 +117,29 @@ const MainLayout = () => {
                 </div>
             </header>
             <nav>
-                <div class="relative h-[75px] w-full rounded-br-[45px] rounded-bl-[45px]  bg-white py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
+                <div class="relative h-[75px] w-full rounded-br-[45px] rounded-bl-[45px]  bg-white py-2 text-neutral-500 shadow-lg shadow-[#ECF0FB] hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
                     <div className="relative flex justify-end top-[-5px] right-[20px] ">
+                        <a href="/listing">
+                            <button class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
+                                Strona Główna
+                            </button>
+                        </a>
                         {auth.user != null ? (
-                            <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
-                                Moje Ołoszenia
-                            </div>
+                            <>
+                                <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
+                                    Moje Ołoszenia
+                                </div>
+                                <a href="/listing/create">
+                                    <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
+                                        Dodaj Ogłoszenie
+                                    </div>
+                                </a>
+                            </>
                         ) : null}
 
                         <a href="/listing">
                             <button class=" w-[250px] h-14 mr-4  bg-bgnav text-white rounded-3xl flex justify-center items-center ">
-                                Ołoszenia
+                                Ogłoszenia
                             </button>
                         </a>
 

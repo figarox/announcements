@@ -5,10 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Listing;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class ListingController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Listing::class, 'listing');
+    }
+
+
     public function index(Request $request)
     {
         $filters = $request->only([

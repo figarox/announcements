@@ -23,7 +23,16 @@ class ListingFactory extends Factory
             'code' => fake()->postcode(),
             'street' => fake()->streetName(),
             'street_nr' => fake()->numberBetween(10, 200),
-            'price' => fake()->numberBetween(50_000, 2_000_000)
+            'floor' => fake()->numberBetween(1, 10),
+            'meters' => fake()->numberBetween(10, 120),
+            'type' => null,
+            'market' => null,
+            'accessories' => null,
+            'advertiser' => null,
+            'age' => fake()->numberBetween(1950, 2024),
+            'price' => fake()->numberBetween(50_000, 2_000_000),
+            'SW' => null,
+
         ];
     }
 }

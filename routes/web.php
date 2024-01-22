@@ -22,12 +22,11 @@ Route::get('/show', [IndexController::class , 'show'])
     ->middleware('auth');
 
 Route::resource('listing', ListingController::class)
-    ->only(['create' ,'edit' , 'update', 'destroy'])
+    ->only(['create', 'store' ,'edit' , 'update', 'destroy'])
     ->middleware('auth');
 
 Route::resource('listing', ListingController::class)
-    ->except(['create' ,'edit' , 'update', 'destroy'])
-    ->middleware('auth');
+    ->except(['create', 'store' ,'edit' , 'update', 'destroy']);
 
 Route::get('login', [AuthController::class, 'create'])
     ->name('login');

@@ -50,8 +50,17 @@ const Login = () => {
                             <div className="input-error">{errors.password}</div>
                         )}
                     </div>
+                    <div class="relative mt-[20px] mb-[20px] flex justify-center space-x-2">
+                        <p>Nie masz jeszcze konta?</p>
+                        <a class="text-bgnav" href="/user-account/create">
+                            Stworz je
+                        </a>
+                    </div>
                     <div class="mt-4">
-                        <button class="btn-primary w-full" type="submit">
+                        <button
+                            class="btn-primary w-full bg-bgnav hover:bg-hbg"
+                            type="submit"
+                        >
                             Login
                         </button>
                     </div>

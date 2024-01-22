@@ -11,8 +11,13 @@ const Create = () => {
         street_nr: 0,
         rooms: 0,
         floor: 0,
+        meters: 0,
+        type: null,
+        market: null,
+        accessories: null,
+        advertiser: null,
+        age: 0,
         price: 0,
-        street_nr: null,
         SW: null,
     });
 

@@ -10,6 +10,7 @@ module.exports = withMT({
     theme: {
         colors: {
             bgnav: "#5554D4",
+            hbg: "#5656af",
         },
     },
     plugins: [require("@tailwindcss/forms")],

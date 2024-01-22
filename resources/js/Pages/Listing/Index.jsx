@@ -9,11 +9,20 @@ import test from "../../../picture/picture.webp";
 const MainListing = ({ listings, flash, success, onAlertHidden, filters }) => {
     const list = listings.data.map((listings) => (
         <Box key={listings.id}>
-            <div class="relative grid grid-rows-2 grid-flow-col gap-0">
-                <img class="row-span-3 w-[200px] h-[233px]" src={test} />
-
-                <div class="col-span-3 bg-gray-300">02</div>
-                <div class="col-span-3 bg-gray-500 ">03</div>
+            <div class="grid grid-rows-3 grid-flow-col gap-4">
+                <div class="row-span-3 w-[330px]">
+                    <img
+                        class="relative top-[8px] left-[10px] w-[330px] h-[200px]"
+                        src={test}
+                    />
+                </div>
+                <div class="col-span-1 row-span-2 w-[800px] p-5">
+                    <div class=" text-[22px]">Mieszkanie na 2 pietrze</div>
+                    <p class=" text-[14px] text-gray-600">{listings.street}</p>
+                    <p>{listings.price} zł</p>
+                    <p>{listings.street_}</p>
+                </div>
+                <div class="row-span-1 w-[800px] col-span-2  p-5 ">03</div>
             </div>
 
             {/* <div>
@@ -29,10 +38,10 @@ const MainListing = ({ listings, flash, success, onAlertHidden, filters }) => {
                 <Filters filters={filters} />
             </div>
             <div class="flex items-center justify-center">
-                <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
-                <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
-                <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
-                <div class=" w-[350px] h-[164px] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
             </div>
 
             <div class="relative flex justify-center ">

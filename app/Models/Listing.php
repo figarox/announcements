@@ -11,7 +11,7 @@ class Listing extends Model
     use HasFactory;
 
     protected $fillable = [
-        'voivodeship', 'city', 'code', 'street', 'street_nr','rooms', 'floor' ,'price' ,'SW'
+        'voivodeship', 'city', 'code', 'street', 'street_nr','rooms', 'floor','meters','type','market','accessories','advertiser','age' ,'price' ,'SW'
     ];
     
     public function owner(): BelongsTo

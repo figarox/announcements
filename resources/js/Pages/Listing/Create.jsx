@@ -68,13 +68,13 @@ const Create = () => {
                         <tr>
                             <td>miasto</td>
                             <td>
-                                <input
+                                <nput
                                     type="text"
                                     value={data.city}
                                     onChange={(e) =>
                                         setData("city", e.target.value)
                                     }
-                                ></input>
+                                ></nput>
                             </td>
                         </tr>
                         <tr>
@@ -133,6 +133,78 @@ const Create = () => {
                                     value={data.floor}
                                     onChange={(e) =>
                                         setData("floor", e.target.value)
+                                    }
+                                ></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Metraz</td>
+                            <td>
+                                <input
+                                    type="number"
+                                    value={data.meters}
+                                    onChange={(e) =>
+                                        setData("meters", e.target.value)
+                                    }
+                                ></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Typ</td>
+                            <td>
+                                <input
+                                    type="text"
+                                    value={data.type}
+                                    onChange={(e) =>
+                                        setData("type", e.target.value)
+                                    }
+                                ></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Market</td>
+                            <td>
+                                <input
+                                    type="text"
+                                    value={data.market}
+                                    onChange={(e) =>
+                                        setData("market", e.target.value)
+                                    }
+                                ></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dodatki</td>
+                            <td>
+                                <input
+                                    type="text"
+                                    value={data.accessories}
+                                    onChange={(e) =>
+                                        setData("accessories", e.target.value)
+                                    }
+                                ></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rynek</td>
+                            <td>
+                                <input
+                                    type="number"
+                                    value={data.advertiser}
+                                    onChange={(e) =>
+                                        setData("advertiser", e.target.value)
+                                    }
+                                ></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rok budowy</td>
+                            <td>
+                                <input
+                                    type="date"
+                                    value={data.age}
+                                    onChange={(e) =>
+                                        setData("age", e.target.value)
                                     }
                                 ></input>
                             </td>

@@ -6,7 +6,14 @@ import Filters from "../../Components/Filters";
 import Pagination from "../../Components/UI/Pagination";
 import test from "../../../picture/picture.webp";
 
-const MainListing = ({ listings, flash, success, onAlertHidden, filters }) => {
+const MainListing = ({
+    listings,
+    flash,
+    success,
+    onAlertHidden,
+    filters,
+    auth,
+}) => {
     const list = listings.data.map((listings) => (
         <Box key={listings.id}>
             <div class="grid grid-rows-3 grid-flow-col gap-4">
@@ -22,7 +29,12 @@ const MainListing = ({ listings, flash, success, onAlertHidden, filters }) => {
                     <p>{listings.price} zł</p>
                     <p>{listings.street_}</p>
                 </div>
-                <div class="row-span-1 w-[800px] col-span-2  p-5 ">03</div>
+                <div class="row-span-1 w-[800px] col-span-2  p-5 ">
+                    {" "}
+                    {listings.id == auth.user.id ? "dobrze" : "nie dobrze"}
+                    <p>{listings.by_user_id}</p>
+                    <p>{auth.user.id}</p>
+                </div>
             </div>
 
             {/* <div>

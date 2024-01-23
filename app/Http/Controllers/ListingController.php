@@ -85,7 +85,26 @@ class ListingController extends Controller
 
     public function store(Request $request)
     {
-     Listing::create($request->all());
+        $request->user()->listings()->create(
+            $request->validate([
+                'voivodeship' => 'required|min:0|max:20',
+                'city' => 'required',
+                'code' => 'required',
+                'street' => 'required',
+                'street_nr' => 'required|min:1|max:1000',
+                'rooms' => 'required|min:1|max:1000',
+                'floor' => 'required|min:1|max:1000',
+                'meters' => 'required|min:1|max:1000',
+                'type' => 'required',
+                'market' => 'required',
+                'accessories' => 'required',
+                'advertiser' => 'required',
+                'age' => 'required|min:1|max:14',
+                'price' => 'required|integer|min:1|max:20000000',
+                'SW' => 'required',
+
+            ])
+        );
 
      return redirect()->route('listing.index')
         ->with('success', 'Dodano twoje ogłoszenie !');

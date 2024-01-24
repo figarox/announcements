@@ -13,7 +13,7 @@ const Create = () => {
         floor: 0,
         meters: 0,
         type: null,
-        market: null,
+        title: null,
         accessories: null,
         advertiser: null,
         age: 0,
@@ -44,7 +44,7 @@ const Create = () => {
 
     function submit(e) {
         e.preventDefault();
-        post(`/listing`);
+        post(`/account/listing`);
     }
 
     return (
@@ -68,13 +68,13 @@ const Create = () => {
                         <tr>
                             <td>miasto</td>
                             <td>
-                                <nput
+                                <input
                                     type="text"
                                     value={data.city}
                                     onChange={(e) =>
                                         setData("city", e.target.value)
                                     }
-                                ></nput>
+                                ></input>
                             </td>
                         </tr>
                         <tr>
@@ -162,13 +162,13 @@ const Create = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td>Market</td>
+                            <td>Tytul</td>
                             <td>
                                 <input
                                     type="text"
-                                    value={data.market}
+                                    value={data.title}
                                     onChange={(e) =>
-                                        setData("market", e.target.value)
+                                        setData("title", e.target.value)
                                     }
                                 ></input>
                             </td>

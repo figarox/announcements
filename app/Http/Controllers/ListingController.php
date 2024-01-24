@@ -66,70 +66,12 @@ class ListingController extends Controller
         );
     }
 
-    public function edit(Listing $listing)
-    {
-        //
-        return inertia(
-            'Listing/Edit',
-            [
-                'listing' => $listing
-            ]
-        );
-    }
 
-    public function create()
-    {
-        //
-        return inertia('Listing/Create');
-    }
 
-    public function store(Request $request)
-    {
-        $request->user()->listings()->create(
-            $request->validate([
-                'voivodeship' => 'required|min:0|max:20',
-                'city' => 'required',
-                'code' => 'required',
-                'street' => 'required',
-                'street_nr' => 'required|min:1|max:1000',
-                'rooms' => 'required|min:1|max:1000',
-                'floor' => 'required|min:1|max:1000',
-                'meters' => 'required|min:1|max:1000',
-                'type' => 'required',
-                'market' => 'required',
-                'accessories' => 'required',
-                'advertiser' => 'required',
-                'age' => 'required|min:1|max:14',
-                'price' => 'required|integer|min:1|max:20000000',
-                'SW' => 'required',
-
-            ])
-        );
-
-     return redirect()->route('listing.index')
-        ->with('success', 'Dodano twoje ogłoszenie !');
-    }
-    
-    public function update(Request $request, Listing $listing)
-    {
-        $listing->update(
-            $request->validate([
-                'voivodeship' => 'required',
-                'city' => 'required',
-                'code' => 'required',
-                'street' => 'required',
-                'street_nr' => 'required|min:1|max:1000',
-                'price' => 'required|integer|min:1|max:20000000',
-            ])
-        );
-
-        return redirect()->route('listing.index')
-            ->with('success', 'Listing was changed!');
-    }
 
     public function show(Listing $listing)
     {
-        return inertia('Listing/show' , 
+        return inertia('Listing/Show' , 
         [
             'listings' => $listing
         ]

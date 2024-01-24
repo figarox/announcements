@@ -13,7 +13,7 @@ const Test2 = ({ listing, success }) => {
 
     function submit(e) {
         e.preventDefault();
-        put(`/listing/${listing.id}`);
+        put(`/account/listing/${listing.id}`);
     }
 
     return (
@@ -33,6 +33,8 @@ const Test2 = ({ listing, success }) => {
                                 ></input>
                             </td>
                         </tr>
+                        {errors.voivodeship && <div>{errors.voivodeship}</div>}
+
                         <tr>
                             <td>Miasto</td>
                             <td>
@@ -93,6 +95,9 @@ const Test2 = ({ listing, success }) => {
                                 ></input>
                             </td>
                         </tr>
+                        {errors.price && (
+                            <div class="errors">{errors.price}</div>
+                        )}
                     </table>
                     <button type="submit" disabled={processing}>
                         edit

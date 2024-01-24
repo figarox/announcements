@@ -28,3 +28,7 @@
 #circle-notifications:hover #notifications {
     color: yellow;
 }
+
+.errors {
+    color: red;
+}

@@ -11,7 +11,7 @@ const MainLayout = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     const handleLogout = () => {
-        Inertia.delete("logout");
+        Inertia.delete(route("logout"));
     };
     const toggleDiv = () => {
         setIsVisible(!isVisible);
@@ -126,10 +126,12 @@ const MainLayout = () => {
                         </a>
                         {auth.user != null ? (
                             <>
-                                <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
-                                    Moje Ołoszenia
-                                </div>
-                                <a href="/listing/create">
+                                <a href="/account/listing">
+                                    <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
+                                        Moje Ołoszenia
+                                    </div>
+                                </a>
+                                <a href="/account/listing/create">
                                     <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
                                         Dodaj Ogłoszenie
                                     </div>
@@ -149,55 +151,6 @@ const MainLayout = () => {
                     </div>
                 </div>
             </nav>
-
-            {/* <nav class="border-b border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-black w-full h-15">
-                <div class="container mx-auto">
-                    <nav class="p-3 flex items-center justify-between">
-                        <a href="/" class="font-medium">
-                            Strona Główna
-                        </a>
-                        <a href="/" class="font-medium">
-                            Moje Ogłoszenia
-                        </a>
-                        <a href="/listing" class="font-medium">
-                            Mieszkania
-                        </a>
-                        <div class="font-medium">Domy</div>
-                        <div class="font-medium">O nas</div>
-
-                        {auth.user != null ? (
-                            <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 bg-zinc-300 rounded-full flex-1">
-                                    <div class="flex-initial w-64">
-                                        {auth.user.name}
-                                    </div>
-                                </div>
-                                <a href="/listing/create" class="btn-primary">
-                                    + Dodaj Ogłoszenie
-                                </a>
-                                <div>
-                                    <button
-                                        onClick={handleLogout}
-                                        class="font-medium"
-                                    >
-                                        Wyloguj
-                                    </button>
-                                </div>
-                            </div>
-                        ) : (
-                            <div>
-                                <a
-                                    href="/user-account/create"
-                                    class="btn-primary m-4"
-                                >
-                                    Rejestracja
-                                </a>
-                                <a href="/login">Zaloguj się</a>
-                            </div>
-                        )}
-                    </nav>
-                </div>
-            </nav> */}
 
             {flash.success && (
                 <Alert

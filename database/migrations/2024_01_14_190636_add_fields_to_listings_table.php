@@ -22,7 +22,7 @@ return new class extends Migration
 
             $table->unsignedInteger('meters');
             $table->tinyText('type');
-            $table->tinyText('market');
+            $table->tinyText('title');
             $table->tinyText('accessories');
             $table->tinyText('advertiser');
             $table->timestamp('age');
@@ -40,7 +40,7 @@ return new class extends Migration
     {
         if (Schema::hasTable('listings')) {
             Schema::table('listings', function (Blueprint $table) {
-                $table->dropColumn(['voivodeship', 'city', 'code', 'street', 'street_nr', 'rooms', 'floor', 'meters', 'type', 'market', 'accessories', 'advertiser', 'age', 'price', 'SW']);
+                $table->dropColumn(['voivodeship', 'city', 'code', 'street', 'street_nr', 'rooms', 'floor', 'meters', 'type', 'title', 'accessories', 'advertiser', 'age', 'price', 'SW']);
             });
         }
     }

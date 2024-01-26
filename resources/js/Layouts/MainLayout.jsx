@@ -36,7 +36,7 @@ const MainLayout = () => {
 
     return (
         <>
-            <header class="relative flex w-full flex-wrap items-center justify-center bg-[#F6FBFF] py-2 text-neutral-500 shadow-lg shadow-[#ECF0FB] hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
+            <header class="relative flex w-full flex-wrap items-center justify-center bg-[#F6FBFF] py-2 text-neutral-500 shadow-lg shadow-[#ECF0FB] hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4 ">
                 <div class="w-1/3 h-auto flex p-4 ">
                     <div class="ml-6 flex items-center justify-center">
                         <ion-icon id="facebook" name="logo-facebook"></ion-icon>
@@ -55,7 +55,7 @@ const MainLayout = () => {
                         id="circle-notifications"
                         class="w-16 h-16 mr-5 rounded-full bg-bgnav"
                     >
-                        <div class="flex items-center justify-center">
+                        <div class="flex items-center justify-center md-opacity">
                             <div class="relative top-5">
                                 <ion-icon
                                     id="notifications"
@@ -83,11 +83,11 @@ const MainLayout = () => {
                         </button>
 
                         {isVisible && (
-                            <div class="fixed block w-[246px] h-auto right-[22px] top-[80px] z-10 p-5 backdrop-blur-md bg-white/30 border-2 border-gray-300 rounded-3xl">
+                            <div class="fixed block w-[246px] h-auto right-[22px] top-[80px] z-30 p-5 backdrop-blur-md bg-white/30 border-2 border-gray-300 rounded-3xl">
                                 {auth.user != null ? (
                                     <>
                                         <a href="/account">
-                                            <button class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-5 mt-3">
+                                            <button class="w-full h-[50px] bg-bgnav rounded-xl text-white mb-5 mt-3 ">
                                                 Moje Konto
                                             </button>
                                         </a>
@@ -132,7 +132,7 @@ const MainLayout = () => {
                                     </div>
                                 </a>
                                 <a href="/account/listing/create">
-                                    <div class=" w-[250px] h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
+                                    <div class=" w-[250px] md:-w-2 h-14 mr-4 text-bgnav rounded-3xl flex justify-center items-center ">
                                         Dodaj Ogłoszenie
                                     </div>
                                 </a>

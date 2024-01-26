@@ -29,6 +29,12 @@
     color: yellow;
 }
 
+#person {
+    color: rgb(255, 255, 255);
+    font-size: 56px;
+    transition: color 300ms ease-in-out;
+}
+
 .errors {
     color: red;
 }

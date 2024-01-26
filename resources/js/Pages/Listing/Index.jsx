@@ -17,14 +17,14 @@ const MainListing = ({
     const list = listings.data.map((listings) => (
         <a href={`/listing/show/${listings.id}`}>
             <Box key={listings.id}>
-                <div class="grid grid-rows-3 grid-flow-col gap-4">
-                    <div class="row-span-3 w-[330px]">
+                <div class="grid gap-6 md:grid-cols-2 listing:grid-cols-3 items-center">
+                    <div class="">
                         <img
-                            class="relative top-[8px] left-[10px] w-[330px] h-[200px]"
+                            class="relative top-[8px] left-[10px] w-[330px] h-[200px] "
                             src={test}
                         />
                     </div>
-                    <div class="col-span-1 row-span-2 w-[800px] p-5">
+                    <div class="listing:grid-cols-3 listing:col-span-2">
                         <div class=" text-[22px]">Mieszkanie na 2 pietrze</div>
                         <p class=" text-[14px] text-gray-600">
                             {listings.street}
@@ -44,17 +44,17 @@ const MainListing = ({
     return (
         <>
             <MainLayout />
-            <div class="flex items-center justify-center">
+            <div class="relative flex items-center justify-center z-20 ">
                 <Filters filters={filters} />
             </div>
-            <div class="flex items-center justify-center">
-                <div class=" w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
-                <div class=" w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
-                <div class=" w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
-                <div class=" w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+            <div class=" flex flex-wrap items-center justify-center h-[400px]  sm:h-[900px] md:h-[760px] phonebttablet:h-[480px] lg:h-[450px] 2xl:h-[400px] ">
+                <div class=" min-w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" min-w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" min-w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
+                <div class=" min-w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
             </div>
 
-            <div class="relative flex justify-center ">
+            <div class="relative flex justify-center items-center ">
                 <div>{list}</div>
             </div>
 

@@ -47,7 +47,7 @@ const MainListing = ({
             <div class="relative flex items-center justify-center z-20 ">
                 <Filters filters={filters} />
             </div>
-            <div class=" flex flex-wrap items-center justify-center h-[400px]  sm:h-[900px] md:h-[760px] phonebttablet:h-[480px] lg:h-[450px] 2xl:h-[400px] ">
+            <div class=" flex flex-wrap items-center justify-center h-[400px] phone:h-[800px]  sm:h-[800px] md:h-[760px] phonebttablet:h-[480px] lg:h-[450px] 2xl:h-[400px] bigMonittor:h-[230px]">
                 <div class=" min-w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
                 <div class=" min-w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>
                 <div class=" min-w-[350px] h-[164px] shadow-[#ECF0FB] bg-white drop-shadow-lg rounded-3xl mb-7 ml-3 mr-3"></div>

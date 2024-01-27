@@ -22,11 +22,13 @@
 #notifications {
     color: rgb(255, 255, 255);
     font-size: 26px;
-    transition: color 300ms ease-in-out;
+    transition: all 100ms ease-in-out;
 }
 
 #circle-notifications:hover #notifications {
     color: yellow;
+    font-size: 30px;
+    transition: all 100ms ease-in-out;
 }
 
 #person {
@@ -35,6 +37,10 @@
     transition: color 300ms ease-in-out;
 }
 
+#arrow {
+    position: relative;
+    top: 3px;
+}
 .errors {
     color: red;
 }

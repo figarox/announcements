@@ -16,6 +16,10 @@ module.exports = withMT({
             phone: "375px",
             // => @media (min-width: 375px) { ... }
 
+            bigPhone: "440px",
+
+            loginsmall: "540px",
+
             phonebttablet: "747px",
 
             nav: "900px",
@@ -28,9 +32,12 @@ module.exports = withMT({
             laptop: "1024px",
             // => @media (min-width: 1024px) { ... }
 
+            login: "1100px",
+
             desktop: "1280px",
             // => @media (min-width: 1280px) { ... }
+            bigMonittor: "1497px",
         },
     },
-    plugins: [require("@tailwindcss/forms")],
+    plugins: [require("@tailwindcss/forms"), require("tailwindcss-animated")],
 });

@@ -20,24 +20,27 @@ const Login = () => {
             <MainLayout />
 
             <form onSubmit={submit}>
-                <div class=" w-full h-[700px] grid justify-center content-center">
-                    <div class="grid grid-rows-12 grid-flow-col w-[66rem] h-[33rem]">
-                        <div class="flex items-center justify-center row-start-2 row-span-2 w-[34rem] h-[30rem]  drop-shadow-2xl  rounded-l-3xl bg-gradient-to-r from-[#5554D4] via-[#2490F3] to-[#47018C]">
-                            <img src={picture}></img>
+                <div class=" w-full h-[770px] login:h-[700px] grid justify-center content-center">
+                    <div class="grid justify-center content-center grid-rows-12 login:grid-rows-12  login:grid-flow-col login:w-[66rem] h-[760px] login:h-[33rem]">
+                        <div class="row-start-10 flex items-center justify-center  login:row-start-2 login:row-span-2 min-w-[100px] h-[420px] loginsmall:h-[600px] login:w-[34rem] login:h-[30rem]  drop-shadow-2xl  rounded-b-3xl login:rounded-l-3xl bg-gradient-to-r from-[#5554D4] via-[#2490F3] to-[#47018C]">
+                            <img
+                                class="w-[100%] phonebttablet:w-[70%] login:w-[100%]"
+                                src={picture}
+                            ></img>
                         </div>
-                        <div class=" row-end-3 row-span-2  -ml-8 w-[34rem] h-[30rem] drop-shadow-2xl rounded-r-3xl bg-white ">
-                            <div class="absolute ml-[220px] mt-[-50px] w-28 h-28  bg-bgnav rounded-full drop-shadow-2xl flex items-center justify-center">
+                        <div class=" row-start-2 login:row-end-3 login:row-span-2 m-3 login:m-0 login:-ml-8 min-w-[100px] min-h-[400px] login:w-[34rem] login:h-[30rem] drop-shadow-2xl rounded-t-3xl login:rounded-r-3xl bg-white ">
+                            <div class="absolute flex items-center justify-center left-0 right-0 m-auto login:ml-[220px] mt-[-50px] w-28 h-28  bg-bgnav rounded-full drop-shadow-2xl ">
                                 <ion-icon
                                     id="person"
                                     name="people-outline"
                                 ></ion-icon>
                             </div>
                             <div class="grid grid-row-2 gap-1 w-full h-14 mt-12 ">
-                                <div class="w-full h-full row-start-1  border-b-2 border-bgnav flex items-center justify-center">
+                                <div class=" min-w-[100px] login:w-full h-full row-start-1  border-b-2 border-bgnav flex items-center justify-center">
                                     <div class="text-bgnav ">Zaloguj się</div>
                                 </div>
                                 <a
-                                    class="w-full h-full row-end-2  border-b-2 border-gray-200 flex items-center justify-center"
+                                    class="min-w-[100px] login:w-full h-full row-end-2  border-b-2 border-gray-200 flex items-center justify-center"
                                     href="/user-account/create"
                                 >
                                     <div class="">Zarejestruj się</div>

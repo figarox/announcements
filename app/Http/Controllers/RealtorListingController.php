@@ -81,8 +81,8 @@ class RealtorListingController extends Controller
                 'title' => 'required',
                 'accessories' => 'required',
                 'advertiser' => 'required',
-                'age' => 'required|min:1|max:14',
-                'price' => 'required|integer|min:1|max:20000000',
+                'age' => 'required',
+                'price' => 'required|min:1|max:20000000',
                 'SW' => 'required',
 
             ])

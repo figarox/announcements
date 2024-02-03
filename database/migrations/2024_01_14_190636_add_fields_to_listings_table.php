@@ -27,7 +27,7 @@ return new class extends Migration
             $table->tinyText('advertiser');
             $table->timestamp('age');
 
-            $table->unsignedInteger('price');
+            $table->tinyText('price');
             $table->tinyText('SW');
 
         });

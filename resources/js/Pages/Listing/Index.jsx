@@ -25,9 +25,10 @@ const MainListing = ({
                         />
                     </div>
                     <div class="listing:grid-cols-3 listing:col-span-2">
-                        <div class=" text-[22px]">Mieszkanie na 2 pietrze</div>
+                        <div class=" text-[22px]">{listings.title}</div>
                         <p class=" text-[14px] text-gray-600">
-                            {listings.street}
+                            {listings.street} {listings.street_nr} ,{" "}
+                            {listings.city}
                         </p>
                         <p>{listings.price} zł</p>
                         <p>{listings.street_}</p>

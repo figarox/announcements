@@ -17,12 +17,8 @@ class AuthController extends Controller
     {
         if (!Auth::attempt($request->validate([
             'email' => 'required|string|email',
-            'password' => 'required|string'
-        ]), true)) {
-            throw ValidationException::withMessages([
-                'email' => 'Authentication failed'
-            ]);
-        }
+            'password' => 'required|string|min:8|confirmed',
+        ]), true)) 
 
         $request->session()->regenerate();
 

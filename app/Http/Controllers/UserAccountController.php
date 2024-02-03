@@ -23,6 +23,6 @@ class UserAccountController extends Controller
         Auth::login($user);
 
         return redirect()->route('listing.index')
-            ->with('success', 'Account created!');
+            ->with('success', 'Konto utowrzone !!');
     }
 }

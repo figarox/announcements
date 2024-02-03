@@ -143,10 +143,7 @@ const Filters = () => {
                                     }
                                 >
                                     {VoivodeshipOptions.map((n, index) => (
-                                        <Option
-                                            key={index}
-                                            value={n === "6+" ? 6 : n}
-                                        >
+                                        <Option key={index} value={n}>
                                             {n}
                                         </Option>
                                     ))}

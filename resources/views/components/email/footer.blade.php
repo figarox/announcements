@@ -1,0 +1,3 @@
+<p class="margin-top: 20px;">
+Pamiętaj, że Administratorem Twoich danych jest: MTJ Tajchert Juraczyk Spółka Jawna z siedzibą na ul. Emilii Plater 7I / 2 65-395 Zielona Góra. Zawsze możesz poprawić, sprostować swoje dane, cofnąć zgodę w dowolnym momencie, a nawet żądać przeniesienia lub usunięcia danych. Lista podmiotów, którym powierzamy Twoje dane jest tutaj. Robimy to po to, aby świadczyć swoje usługi jak najlepiej. Twoje dane będą przechowywane tak długo, jak to będzie niezbędne, aby zabezpieczyć Twoje prawa (np. okres rękojmi lub przedawnienia, gdy kupujesz produkt). Jeżeli masz jakiekolwiek pytania lub wątpliwości, pisz do nas na maila rodo@xyz.com. Twoje bezpieczeństwo i zaufanie jest dla nas najważniejsze!
+</p>

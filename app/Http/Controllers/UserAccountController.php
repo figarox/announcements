@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Events\SendMail;
+
 
 class UserAccountController extends Controller
 {
@@ -18,9 +20,11 @@ class UserAccountController extends Controller
         $user = User::create($request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:8|confirmed'
+            'password' => 'required|min:3|confirmed'
         ]));
         Auth::login($user);
+        event(new SendMail($user));
+
 
         return redirect()->route('listing.index')
             ->with('success', 'Konto utowrzone !!');
